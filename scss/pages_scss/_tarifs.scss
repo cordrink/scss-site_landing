@@ -1,0 +1,120 @@
+.titre-tatifs {
+  padding: 120px 0 20px;
+}
+
+.container-tarifs {
+  margin: 125px auto 200px;
+  width: 60%;
+  max-width: 1100px;
+  min-width: 300px;
+  height: auto;
+}
+
+.choix-tarifs {
+  margin: 0 auto;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.choix {
+  font-family: confortaa,sans-serif;
+  height: 100%;
+  width: 170px;
+  outline: none;
+  border: none;
+  @extend %flex-double-centre;
+  font-size: 30px;
+  letter-spacing: 3px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.choix:nth-child(1) {
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, .2);
+  border-right: 1px solid #fff;
+}
+
+.choix:nth-child(2) {
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, .2);
+  border-right: 1px solid #fff;
+}
+
+.choix:nth-child(3) {
+  box-shadow: 5px -5px 15px rgba(0, 0, 0, .2);
+  border-right: 1px solid #fff;
+}
+
+.choix.active-choix {
+  background: #fff;
+  color: #000;
+}
+
+//Tableau
+.tableau {
+  border-collapse: collapse;
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  font-size: 30px;
+  background-image: linear-gradient(45deg, rgba(252,249,234, 0.53) 0%, rgba(252,249,234, 0.53) 14.286%,rgba(247,255,244, 0.53) 14.286%, rgba(247,255,244, 0.53) 28.572%,rgba(224,248,243, 0.53) 28.572%, rgba(224,248,243, 0.53) 42.858%,rgba(230,246,246, 0.53) 42.858%, rgba(230,246,246, 0.53) 57.144%,rgba(221,248,252, 0.53) 57.144%, rgba(221,248,252, 0.53) 71.42999999999999%,rgba(218,242,248, 0.53) 71.43%, rgba(218,242,248, 0.53) 85.71600000000001%,rgba(224,245,250, 0.53) 85.716%, rgba(224,245,250, 0.53) 100.002%),linear-gradient(135deg, rgb(246,220,238) 0%, rgb(246,220,238) 12.5%,rgb(250,212,242) 12.5%, rgb(250,212,242) 25%,rgb(248,209,245) 25%, rgb(248,209,245) 37.5%,rgb(247,216,252) 37.5%, rgb(247,216,252) 50%,rgb(240,217,253) 50%, rgb(240,217,253) 62.5%,rgb(218,199,247) 62.5%, rgb(218,199,247) 75%,rgb(215,210,245) 75%, rgb(215,210,245) 87.5%,rgb(206,210,247) 87.5%, rgb(206,210,247) 100%);
+  color: #000;
+}
+
+th {
+  font-size: 40px;
+}
+
+td, th {
+  border: 1px solid #222;
+  padding: 8px;
+  vertical-align: middle;
+  width: 50%;
+}
+
+td {
+  padding-left: 15px;
+}
+
+.panneau {
+  display: none;
+}
+
+.panneau-active {
+  display: block;
+}
+
+@media screen and (max-width: 900px){
+  .container-tarifs {
+    width: 95%;
+  }
+  .choix-tarifs {
+    height: 100px;
+  }
+  .choix {
+    width: 150px;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-tarifs {
+    width: 300px;
+  }
+  .choix-tarifs {
+    height: 75px;
+  }
+  .choix {
+    width: 100px;
+    font-size: 18px;
+  }
+  .tableau {
+    height: 500px;
+    font-size: 22px;
+  }
+  th {
+    font-size: 30px;
+  }
+}
